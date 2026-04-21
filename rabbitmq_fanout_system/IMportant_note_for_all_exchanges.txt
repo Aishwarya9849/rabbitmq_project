@@ -1,0 +1,26 @@
+Yes, you can create queues in the producer
+👉 But ❗ Best practice is: queues + bindings belong to consumers
+❌ If producer creates queues
+Producer must know:
+queue names 😬
+how many consumers 😬
+routing logic 😬
+👉 This creates tight coupling
+=====================================
+✅ If consumer creates queues:
+Producer only knows:
+exchange name
+Consumers decide:
+what messages they want
+👉 This is loose coupling (BEST PRACTICE)
+=========================================================== 
+👉 Yes — for all exchange types (fanout, direct, topic, headers)
+➡️ Queues + bindings are usually created by consumers
+
+No matter the exchange type:
+
+📢 Fanout → broadcast
+🎯 Direct → exact match
+🧩 Topic → pattern match
+🧾 Headers → metadata match
+👉 Routing decision always depends on what the consumer wants
