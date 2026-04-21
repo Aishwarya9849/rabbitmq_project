@@ -1,0 +1,26 @@
+Task-1 Simple Queue Producer & Consuner
+Imagine you are developing a small notification system for a college application Whenever a student submits an assignment, the system should send a message to a queue. Another service will read that message and display a confirmation.
+Write a Node.js program to using a direct exchange in RabbiMQ to:
+•⁠  ⁠Act as a producer that sends a message "Assignment submitted successfully" to a
+•⁠  ⁠Act as a consumer that receives the message from the queue and prints it to the console as a confirmation.
+==========================================================================================================================
+Task-2: Multiple Producers, Single Consumer
+Imagine you are building a centralized logging system for a web application, Dfferent modules of the system such as Authentication, Payments, and Noticiations generates log messages independently. All these logs are sent to a common queue and a simple monitoring service processes them.
+
+Write a Node js program to using a direct exchange in RabbitMQ to:
+1.Create three procedures representing different modules(Authentication, Payments, Notifications) , each sending its own log message to the same queue.
+2.⁠ ⁠Implement a single consumer that reads all messages from the queue.
+3.⁠ ⁠Display each message along with the name of the module(producer) that sent it.
+==========================================================================================================================
+Task 3: Publish/Subscribe (Famout Exchange)
+Imagine you are developing a campus-wide announcement system. Whenever an important announeement is made, it should be broadcast to multiple departments such as Administration and Students at the same time. Every department must receive the same message without missing anything.
+Write a Nodejs program using a fanont exchange in RabbitMQ to:
+•⁠  ⁠Act as a publisher that sends an announcement message to the exchange.
+•⁠  ⁠Create two consumers representing different departments (Administration and Students), both subscribed to the same exchange.
+•⁠  ⁠Ensure that both consumers receive and display every announcement message sent by the publisher.
+=================================================================================================================
+Topics for the exam
+1) Four Exchange Types
+2) Publish Subscribe Model based questions ---
+Such as One Publisher Multiple subscribers (One-To-Many)
+Multiple Publishers One Subscriber(Many to One)
